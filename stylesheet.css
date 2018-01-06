@@ -46,7 +46,7 @@ header h1 {
   font-family: 'Pacifico', cursive;
   font-size: 3.5em;
   color: #3EA2A1;
-  text-shadow: 2px -2px 1px black;
+  text-shadow: 2px -2px 1px rgba(250,0,0,.7);
 }
 
 hr {
@@ -54,7 +54,7 @@ hr {
   background-color: #3EA2A1;
   height: 1px;
   border: 0;
-  box-shadow: .5px -.5px 1px black;
+  box-shadow: 2px -2px 1px rgba(250,0,0,.7);
 
 }
 
@@ -65,7 +65,7 @@ nav {
 nav span {
   padding: 10px;
   font-family: 'Pacifico', cursive;
-  text-shadow: 2px -2px 1px black;
+  text-shadow: 2px -2px 1px rgba(250,0,0,.7);
 }
 
 nav a {
@@ -94,7 +94,8 @@ nav a:hover {
   text-align: center;
   padding: 10px;
   margin: 30px;
-
+  color: rgb(250,81,96);
+  border: 2px solid rgba(250,81,96,.7);
 }
 
 /* NOTE: pictures */
@@ -107,17 +108,30 @@ nav a:hover {
   margin: 0 auto;
 }
 
+/* NOTE: high opacity color over pic removed while hover? */
+
 .photos img {
   width: 300px;
   height: 250px;
   margin: 10px;
   border-radius: 15%;
-
+  opacity: 0.7;
 }
 
 .photos img:hover {
-  border: 2px solid #913395;
+  opacity: 1;
+
+}
+
+.photos .overlay{
   border-radius: 15%;
+  background-color: rgba(49, 162, 160, 0.3);
+  border: 2px solid rgba(250,81,96,.7);
+}
+
+.photos .overlay::before {
+  border-radius: 15%;
+  background-color: rgba(49, 162, 160, 0.3);
 }
 
 /* NOTE: footer */
