@@ -25,6 +25,7 @@ body {
     border: 10px solid transparent;
 }
 
+
 /* NOTE: header */
 
 header {
@@ -141,6 +142,13 @@ footer {
   text-align: center;
   font-size: .75em;
   margin-top: 200px;
+}
+
+@media (max-width: 1024px){
+  footer {
+  margin-top: 800px;
+}
+
 }
 
 footer span {
