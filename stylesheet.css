@@ -1,122 +1,108 @@
-/* NOTE: universal */
-
-*  {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-border-box;
-  font-family: 'Space Mono', monospace;
-}
-
-.container {
-  margin: auto;
-}
-
-html {
+  box-sizing: border-box;
 }
 
 body {
   background-image: url(photos/wallPic.jpg);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-color: white;
 }
 
-body {
-    border: 10px solid transparent;
-}
-
-
-/* NOTE: header */
+/* NOTE: nav */
 
 header {
-  /*background-color: white;*/
-  text-align: center;
-  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header span {
+  padding: 10px;
+  color: black;
+  font-family: 'Molle', cursive;
+  color: #7A9DB9;
+  font-size: 1em;
+
+}
+
+header nav {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+header a:hover {
+  font-weight: bold;
+  color: #F6B76E;
+}
+
+header span:hover {
+  color: #F6B76E;
+  text-shadow: 3px 3px 3px black;
+}
+
+/* NOTE: title */
+
+.title {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 60%;
-  border-radius: 180%;
-  min-width: 350px;
-  max-width: 400px;
+  margin-top: 60px;
+  flex-wrap: wrap;
 }
 
-header h1 {
-  display: inline-block;
-  padding: 10px;
-  font-family: 'Pacifico', cursive;
-  font-size: 3.5em;
-  color: #3EA2A1;
-  text-shadow: 2px -2px 1px rgba(250,0,0,.7);
+.title h1 {
+  font-family: 'Molle', cursive;
+  font-size: 4em;
+  text-align: center;
+  color: #7A9DB9;
+  text-shadow: 3px 3px 3px black;
 }
 
-hr {
-  margin-top: 4px;
-  background-color: #3EA2A1;
-  height: 1px;
-  border: 0;
-  box-shadow: 2px -2px 1px rgba(250,0,0,.7);
-
-}
-
-nav {
-  padding: ;
-}
-
-nav span {
-  padding: 10px;
-  font-family: 'Pacifico', cursive;
-  text-shadow: 2px -2px 1px rgba(250,0,0,.7);
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  color: #3EA2A1;
-}
-
-nav a:hover {
-  font-weight: bold;
-  color: #913395;
-
-}
-
-/* NOTE: welcome message */
+/* NOTE: welcome */
 
 .welcome {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-}
-.welcome p {
-  display: inline-block;
   width: 50%;
-  background-color: rgba(49, 162, 160, 0.3);
+  margin: 0 auto;
   text-align: center;
-  padding: 10px;
-  margin: 30px;
-  color: rgb(250,81,96);
-  border: 2px solid rgba(250,81,96,.7);
+  margin-top: 60px;
 }
 
-/* NOTE: pictures */
+.welcome p {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #7A9DB9;
+  font-size: 1em;
+}
+
+/* NOTE: photos */
 
 .photos {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 60px;
 }
 
 /* NOTE: high opacity color over pic removed while hover? */
 
 .photos img {
-  width: 200px;
-  height: 150px;
-  margin: 10px;
+  width: 250px;
+  height: 200px;
+  margin-top: 10px;
   border-radius: 15%;
   opacity: 0.7;
+  box-shadow: 5px 5px 5px black;
 }
 
 .photos img:hover {
@@ -124,33 +110,59 @@ nav a:hover {
 
 }
 
-/*.photos .overlay{
-  border-radius: 15%;
-  margin: 5px;
-  background-color: rgba(49, 162, 160, 0.3);
-  border: 2px solid rgba(250,81,96,.7);
-}*/
-
-.photos .overlay::before {
-  border-radius: 15%;
-  background-color: rgba(49, 162, 160, 0.3);
-}
-
 /* NOTE: footer */
 
 footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:30px;
   text-align: center;
-  font-size: .75em;
-  margin-top: 200px;
-}
-
-@media (max-width: 1024px){
-  footer {
-  margin-top: 800px;
-}
-
 }
 
 footer span {
-  padding:10px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: .75em;
+  margin-top: 200px;
+  color: #7A9DB9;
+}
+
+/* NOTE: media queries */
+
+@media screen and (max-width: 767px) {
+  footer {
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    height:30px;
+    margin-top: 200px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  #head {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  header span {
+    display: inline-block;
+    padding-top: 5px;
+  }
+
 }
