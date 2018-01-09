@@ -111,8 +111,8 @@ nav a:hover {
 /* NOTE: high opacity color over pic removed while hover? */
 
 .photos img {
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 150px;
   margin: 10px;
   border-radius: 15%;
   opacity: 0.7;
@@ -123,11 +123,12 @@ nav a:hover {
 
 }
 
-.photos .overlay{
+/*.photos .overlay{
   border-radius: 15%;
+  margin: 5px;
   background-color: rgba(49, 162, 160, 0.3);
   border: 2px solid rgba(250,81,96,.7);
-}
+}*/
 
 .photos .overlay::before {
   border-radius: 15%;
