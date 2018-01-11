@@ -27,7 +27,6 @@ header a {
 
 header span {
   padding: 10px;
-  color: black;
   font-family: 'Molle', cursive;
   color: #7A9DB9;
   font-size: 1em;
@@ -113,10 +112,7 @@ header span:hover {
 /* NOTE: footer */
 
 footer {
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
+  margin-top: 100px;
   height:30px;
   text-align: center;
 }
@@ -144,6 +140,7 @@ form {
   font-size: 1em;
   border-radius: 15%;
   min-width: 300px;
+  border: 1px solid #7A9DB9;
 }
 
 input[type=submit] {
@@ -164,22 +161,79 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #F6B76E;
 ;
+}
 
+form label {
+  padding: 3px;
+}
+
+/* NOTE: About page */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.list {
+  margin: 10px;
+  list-style: inside;
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #7A9DB9;
+  background-color: #F0F0F0;
+}
+
+.list li {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #7A9DB9;
+  font-size: 1.25em;
+  padding-top: 5px;
+}
+
+ul {
+  margin: 0 auto;
+  width: 50%;
+}
+
+ol {
+  margin: 0 auto;
+  width: 50%;
+}
+
+ol li {
+}
+
+.list h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #7A9DB9;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.link {
+  text-align: center;
+  margin-top: 60px;
+  padding: 10px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #7A9DB9;
+}
+
+.link a {
+  font-family: 'Molle', cursive;
+  color: #7A9DB9;
+}
+
+.link a:hover {
+  color: #F6B76E;
+  text-shadow: 3px 3px 3px black;
 }
 
 /* NOTE: media queries */
 
-@media screen and (max-width: 767px) {
-  footer {
-    position: relative;
-    bottom:0;
-    left:0;
-    right:0;
-    height:30px;
-    margin-top: 200px;
-    text-align: center;
-  }
-}
+
 
 @media screen and (max-width: 400px) {
 
