@@ -12,6 +12,8 @@ body {
   background-position: center;
   background-size: cover;
   background-color: white;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* NOTE: nav */
@@ -201,18 +203,13 @@ form label {
   padding-top: 5px;
 }
 
-ul {
+ul, ol {
   margin: 0 auto;
   width: 50%;
 }
 
-ol {
-  margin: 0 auto;
-  width: 50%;
-}
 
-ol li {
-}
+
 
 .list h2 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
